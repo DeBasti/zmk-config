@@ -12,7 +12,7 @@
 
 #define LTR 0
 #define NAV 1
-#define SYN 2
+#define SYM 2
 #define NUM 3
 #define SON 4
 #define TRI 5
@@ -100,7 +100,7 @@
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <      │ . >      │ ?        │
             &kp Y      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &kp LS(MINUS)
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                        &lt NAV SPACE  &lt NUM TAB   &lt SYN ENTER  &mt LSHIFT BACKSPACE
+                                        &lt NAV SPACE  &lt NUM TAB   &lt SYM ENTER  &mt LSHIFT BACKSPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯                   
 		    >;
 		};
@@ -110,43 +110,43 @@
 		&trans &trans &trans &trans &trans		&trans &kp INS &kp DEL &trans  &trans 
 		&trans &trans &trans &trans &trans 		&kp PSCRN &kp LEFT  &kp UP &kp DOWN  &kp RIGHT 
 		&trans &trans &trans &trans &trans   	&trans &kp HOME &kp PG_UP &kp PG_DN  &kp END 
-					    &kp SPACE &kp TAB      &kp ESC  &mt LSHIFT BACKSPACE 
+					    &kp SPACE &kp TAB       &kp ESC  &mt LSHIFT BACKSPACE 
 		    >;
 		};
 		
-		syn_layer {
+		sym_layer {
 		    bindings = <
-		&kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT    			&kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp RPRN 
-		&kp HASH  &kp QMARK  &kp FSLH  &kp COLN  &kp SCLN 			&kp MINUS &kp KP_EQUAL  &kp LBRC  &kp RBRC   &kp BKSP
-		&kp LSFT  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp UNDER &kp LEFT &kp DOWN &kp UP  &kp RIGHT
-					  &mo 3 &kp LCTL  				&kp SPC  &mo 2 
+		&kp RA(E)  &kp RA(N7) &kp RA(N0)  &kp LS(N8)  &kp LS(N9)    			    &kp RA(N8) &kp RA(N9) &kp LS(RBKT) &kp RA(RBKT) &trans 
+		&kp GRAVE  &kp RBKT  &kp LS(N0)  &kp SLASH  &kp LS(N4) 			            &kp LS(NON_US_HASH) &kp LS(N2) &kp LS(N7) &kp LS(DOT) &kp LS(NON_US_BACKSLASH)
+		&kp LS(COMMA) &kp LS(N5) &kp RA(NON_US_BACKSLASH) &kp LS(SLASH) &kp RA(Q)   &kp LS(N1) &kp LS(EQUAL) &kp NON_US_HASH &kp LS(N6) &kp NON_US_BACKSLASH
+					                    &kp ESC &kp RA(MINUS)                       &kp ENTER &mt LSHIFT BACKSPACE
 		    >;
 		};
 
         num_layer {
 		    bindings = <
-		&kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT    			&kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp RPRN 
-		&kp HASH  &kp QMARK  &kp FSLH  &kp COLN  &kp SCLN 			&kp MINUS &kp KP_EQUAL  &kp LBRC  &kp RBRC   &kp BKSP
-		&kp LSFT  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp UNDER &kp LEFT &kp DOWN &kp UP  &kp RIGHT
-					  &mo 3 &kp LCTL  				&kp SPC  &mo 2 
+		&trans &kp N7 &kp N8 &kp N9 &trans                  			&trans &kp F1 &kp F2 &kp F3 &kp F4 &trans 
+		&kp N0 &kp N4 &kp N5 &kp N6 &trans 			                    &trans &kp F5 &kp F6 &kp F7 &kp F8 &trans
+		&trans &kp N1 &kp N2 &kp N3 &trans  			                &trans &kp F9 &kp F10 &kp F11 &kp F12 &trans
+					  &kp SPACE &kp TAB                   				&kp ESC  &mt LSHIFT BACKSPACE
 		    >;
 		};
 
         son_layer {
 		    bindings = <
-		&kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT    			&kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp RPRN 
-		&kp HASH  &kp QMARK  &kp FSLH  &kp COLN  &kp SCLN 			&kp MINUS &kp KP_EQUAL  &kp LBRC  &kp RBRC   &kp BKSP
-		&kp LSFT  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp UNDER &kp LEFT &kp DOWN &kp UP  &kp RIGHT
-					  &mo 3 &kp LCTL  				&kp SPC  &mo 2 
+		&trans &trans &trans &trans &trans    			    &trans &trans &kp LBKT &trans &trans 
+		&kp SINGLE_QUOTE &trans &kp MINUS &trans &trans     &trans &trans &trans &trans &trans
+		&trans &trans &trans &trans &trans    			    &trans &trans &trans &trans &trans
+                            &kp SPACE &kp TAB   			&kp ESC  &mt LSHIFT BACKSPACE
 		    >;
 		};	
 		
 		tri_layer {
 		    bindings = <
-		&kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5 			&trans &trans   &trans   &trans  &trans
-		&kp F1 &kp F2 &kp F3 &kp F4 &kp F5  						&trans &kp PG_UP  &kp K_VOL_UP &kp K_MUTE &trans 
-		&bt BT_CLR  &bt BT_NXT &bt BT_PRV &kp F6 &kp F7   				&trans &kp PG_DN  &kp K_VOL_DN  &trans &trans   
-					 &trans &trans  					&trans &trans 
+		&trans &trans &trans &bt BT_PRV &bt BT_CLR			                    &trans &trans &trans &trans &trans
+		&bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  		&trans &bt BT_NXT &trans &trans &trans 
+		&trans &trans &trans &trans &trans   				                    &trans &trans &trans &trans &trans
+					        &trans &trans  					                    &trans &trans 
 		    >;
 		};	
         
