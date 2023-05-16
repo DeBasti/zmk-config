@@ -47,6 +47,29 @@
         };
     };
 
+    macros {
+        winLeft: winLeft {
+            label = "winLeft";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LGUI>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LCTRL &kp LGUI>
+                ;
+        };
+        winRight: winRight {
+            label = "winRight";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LGUI>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LCTRL &kp LGUI>
+                ;
+        };
+    };
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -115,7 +138,7 @@
 		    bindings = <
 		&none &none &none &bt BT_PRV &bt BT_CLR			                        &none &none &none &none &none
 		&bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  		&none &bt BT_NXT &none &none &none 
-		&none &none &none &none &none   				                        &none &none &none &none &none
+		&none &none &winLeft &none &none   				                        &none &none &winRight &none &none
 					        &none &none  					                    &none &none 
 		    >;
 		};	
