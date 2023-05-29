@@ -19,8 +19,7 @@
 #define TRI 5
 
 &mt {
-  //  flavor = "tap-preferred";
-   // tapping_term_ms = <200>;
+  //  standard is hold preferred with tapping_term_ms = <200>;
 };
 
 / { 
