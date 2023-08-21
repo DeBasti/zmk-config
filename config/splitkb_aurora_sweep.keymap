@@ -93,8 +93,8 @@
        	default_layer {
 		    bindings = <
 		//╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Y       │  '       │
-            &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Z      &kp LS(NON_US_HASH)
+        //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Y       │ TeamsMute│
+            &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Z      &kp LC(KP_N6)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │  O       │
         HRML(A,         R,         S,         T)       &kp G          &kp M  &ht RSHIFT N  &ht RCTRL E  &lt SON I  &ht RGUI O
@@ -110,8 +110,8 @@
        	nav_layer {
 		    bindings = <
 		&none &kp LC(KP_N4) &kp LC(KP_N5) &kp LC(KP_N6) &none		&none &kp INS &kp DEL &kp PG_UP  &none 
-		&none &kp KP_N8 &kp KP_N9 &kp C_VOL_UP &none                &kp PSCRN &kp LEFT  &kp UP &kp RIGHT  &none 
-		&none &vsCodeFormat &kp LC(C) &kp C_VOL_DN &kp LC(V)        &none &kp HOME &kp DOWN &kp PG_DN  &kp END 
+		&winLeft &kp KP_N8 &kp KP_N9 &kp C_VOL_UP &none                &kp PSCRN &kp LEFT  &kp UP &kp RIGHT  &none 
+		&winRight &vsCodeFormat &kp LC(C) &kp C_VOL_DN &kp LC(V)        &none &kp HOME &kp DOWN &kp PG_DN  &kp END 
 					                &kp SPACE &kp TAB               &kp ESC  &trans 
 		    >;
 		};
@@ -147,7 +147,7 @@
 		    bindings = <
 		&none &none &none &bt BT_PRV &bt BT_CLR			                        &none &none &none &none &none
 		&bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  		&none &bt BT_NXT &none &none &none 
-		&none &none &winLeft &none &none   				                        &none &none &winRight &none &none
+		&none &none &none &none &none   				                        &none &none &none &none &none
 					        &none &none  					                    &none &none 
 		    >;
 		};	
